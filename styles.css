@@ -1,0 +1,174 @@
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: #4393a5;
+    color: rgb(235, 226, 226);
+    font-family: "Open Sans", sans-serif;
+}
+
+.wrapper {}
+
+/* Header */
+
+header {
+    padding-top: 20px;
+}
+
+.header-container {
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+@media (min-width: 1200px) {
+    .header-container {
+        width: 1170px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+/* Navigation */
+
+.logo {}
+
+.logo-image {
+    height: 100px;
+}
+
+.navbar {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.menu {
+    margin: 0;
+    margin-top: 50px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* justify-content: flex-end; */
+    color: white;
+}
+
+.menu-item {
+    margin-left: 25px;
+    line-height: 40px;
+    height: 40px;
+}
+
+.menu-item a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.menu-item a:hover {
+    text-decoration: underline;
+}
+
+/* Slides */
+
+.slide {
+    height: 300px;
+    position: relative;
+}
+
+.slide .content {
+    display: flex;
+    flex-direction: row;
+}
+
+.slide-block {
+    flex: 1;
+}
+
+#main {
+    background-color: #4393a5;
+}
+
+.main-desc {
+    height: 300px;
+}
+
+#company {
+    color: #4393a5;
+    background-color: white;
+}
+
+.company-detail {
+    height: 300px;
+}
+
+#team {
+    background-color: #4393a5;
+}
+
+.team-detail {
+    height: 300px;
+}
+
+#support {
+    color: #4393a5;
+    background-color: white;
+    height: 300px;
+}
+
+.support-detail {
+    height: 300px;
+}
+
+#contact {
+    background-color: #4393a5;
+    height: 300px;
+}
+
+.contact-detail {
+    height: 300px;
+}
+
+.copyright {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+}
+
+/* Triangles */
+
+.ss-style-triangles {
+    position: relative;
+    /* padding: 10em; */
+    color: #fff;
+    text-align: center;
+}
+
+.ss-style-triangles:not(:last-of-type, :first-of-type)::before,
+.ss-style-triangles:not(:last-of-type)::after {
+    position: absolute;
+    content: '';
+    pointer-events: none;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    -webkit-transform: translateX(-50%) rotate(45deg);
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.ss-style-triangles::before {
+    top: -50px;
+    background: #4393a5;
+}
+
+.ss-style-triangles:not(:last-of-type)::after {
+    bottom: -50px;
+    z-index: 10;
+    background: inherit;
+}
