@@ -78,7 +78,6 @@ header {
 /* Slides */
 
 .slide {
-    height: 300px;
     position: relative;
 }
 
@@ -95,8 +94,8 @@ header {
     background-color: #4393a5;
 }
 
-.main-desc {
-    height: 300px;
+.main-view {
+    height: 500px;
 }
 
 #company {
@@ -104,16 +103,48 @@ header {
     background-color: white;
 }
 
-.company-detail {
-    height: 300px;
+.description {
+    /* min-height: 300px; */
+    text-align: left;
 }
+
+/* TODO: remove once better structure */
+
+/* .description>* {
+    padding-left: 30px;
+    padding-right: 30px;
+} */
 
 #team {
     background-color: #4393a5;
 }
 
-.team-detail {
-    height: 300px;
+#team .content {
+    flex-direction: column;
+}
+
+.team-list {
+    margin: 35px 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.team-picture {
+    width: 170px;
+    height: 170px;
+    margin: 0 20px;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid #2d798a;
+}
+
+.member-desc {
+    width: 170px;
+    height: 170px;
+    margin: 0 20px;
+    text-align: center;
 }
 
 #support {
@@ -122,16 +153,8 @@ header {
     height: 300px;
 }
 
-.support-detail {
-    height: 300px;
-}
-
 #contact {
     background-color: #4393a5;
-    height: 300px;
-}
-
-.contact-detail {
     height: 300px;
 }
 
@@ -150,8 +173,7 @@ header {
     text-align: center;
 }
 
-.ss-style-triangles:not(:last-of-type, :first-of-type)::before,
-.ss-style-triangles:not(:last-of-type)::after {
+.ss-style-triangles:not(:last-of-type, :first-of-type)::before, .ss-style-triangles:not(:last-of-type)::after {
     position: absolute;
     content: '';
     pointer-events: none;
