@@ -3,16 +3,22 @@ html {
     height: 100%;
 }
 
-/* bluecolor */
+/* bluecolor #4393a5 */
 
-/* #4393a5 */
+/* blue v2 #68a3b9 */
+
+/* green #91B968 */
+
+/* white #fafafa */
+
+/* new white #fdfdfd */
 
 body {
     width: 100%;
     height: 100%;
     margin: 0;
-    background-color: #68a3b9;
-    color: rgb(235, 226, 226);
+    background-color: #fdfdfd;
+    color: #68a3b9;
     font-family: "Open Sans", sans-serif;
 }
 
@@ -21,7 +27,8 @@ body {
 /* Header */
 
 .header {
-    padding-top: 20px;
+    padding: 20px 0;
+    background-color: #68a3b9;
 }
 
 .header-container {
@@ -46,7 +53,6 @@ body {
 }
 
 .navbar {
-    margin-bottom: 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -60,7 +66,7 @@ body {
     flex-direction: row;
     justify-content: space-evenly;
     /* justify-content: flex-end; */
-    color: white;
+    color: #fdfdfd;
 }
 
 .menu-item {
@@ -70,7 +76,7 @@ body {
 }
 
 .anchor-link, .link-to-top {
-    color: white;
+    color: #fdfdfd;
     text-decoration: none;
     text-transform: uppercase;
 }
@@ -81,19 +87,31 @@ body {
 
 /* Footer */
 
-.footer {}
+.footer {
+    color: #fdfdfd;
+    background-color: #68a3b9;
+    padding: 20px;
+}
 
 .link-to-top {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    color: white;
+    color: #fdfdfd;
     text-decoration: none;
     text-transform: uppercase;
 }
 
 .link-to-top:hover {
     text-decoration: underline;
+}
+
+.copyright {
+    padding: 5px;
+    display: inline-block;
+    /* position: absolute;
+    bottom: 30px;
+    left: 30px; */
 }
 
 /* Slides */
@@ -113,19 +131,38 @@ body {
 }
 
 #main {
+    color: #fdfdfd;
     background-color: #68a3b9;
 }
 
 .main-view {
-    height: 500px;
+    height: 850px;
 }
 
-#company {
-    color: #68a3b9;
-    background-color: #2D2A2E;
+#company {}
+
+#company .content {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
 }
 
-.description {
+#company .picture-container {
+    width: 1000px;
+}
+
+.company-picture {
+    flex: 1;
+    width: 1000px;
+    vertical-align: bottom;
+    /* height: 100%; */
+    /* line-height: 100%; */
+    /* margin-top: 100px; */
+    /* position: absolute;
+    bottom: 0; */
+}
+
+#company .description {
     /* min-height: 300px; */
     text-align: left;
 }
@@ -137,12 +174,11 @@ body {
     padding-right: 30px;
 } */
 
-#team {
-    background-color: #91B968;
-}
+#team {}
 
 #team .content {
     flex-direction: column;
+    text-align: center;
 }
 
 .team-list {
@@ -153,60 +189,60 @@ body {
     justify-content: space-evenly;
 }
 
-.team-picture {
-    width: 170px;
-    height: 170px;
+.team-member {}
+
+.team-picture-container {
+    width: 250px;
+    height: 250px;
     margin: 0 20px;
     border-radius: 50%;
-    background-color: white;
-    border: 2px solid #2d798a;
+    overflow: hidden;
+}
+
+.team-picture {
+    width: 250px;
+    height: 250px;
+}
+
+.description .team-list {
+    margin-top: 0;
 }
 
 .member-desc {
-    width: 170px;
-    height: 170px;
+    width: 250px;
     margin: 0 20px;
     text-align: center;
 }
 
-#support {
-    color: #91B968;
-    background-color: #2D2A2E;
-    /* height: 300px; */
+#support {}
+
+#support .picture-container {
+    width: 1000px;
 }
 
-#contact {
-    background-color: #b96f68;
-    height: 300px;
+.support-picture {
+    flex: 1;
+    width: 1000px;
+    /* height: 100%; */
+    /* line-height: 100%; */
+    /* margin-top: 100px; */
+    /* position: absolute;
+    bottom: 0; */
 }
 
-.copyright {
-    position: absolute;
-    bottom: 30px;
-    left: 30px;
+#contact {}
+
+#contact .picture-container {
+    width: 500px;
 }
 
-/* Triangles */
-
-.ss-style-triangles {
-    position: relative;
-    color: #fff;
-    text-align: center;
-}
-
-.ss-style-triangles:not(:last-of-type)::before, .ss-style-triangles:not(:last-of-type)::after {
-    position: absolute;
-    content: '';
-    pointer-events: none;
-    left: 50%;
-    width: 60px;
-    height: 60px;
-    -webkit-transform: translateX(-50%) rotate(45deg);
-    transform: translateX(-50%) rotate(45deg);
-}
-
-.ss-style-triangles:not(:last-of-type)::after {
-    bottom: -30px;
-    z-index: 10;
-    background: inherit;
+.contact-picture {
+    flex: 1;
+    width: 500px;
+    vertical-align: bottom;
+    /* height: 100%; */
+    /* line-height: 100%; */
+    /* margin-top: 100px; */
+    /* position: absolute;
+    bottom: 0; */
 }
