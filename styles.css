@@ -3,11 +3,15 @@ html {
     height: 100%;
 }
 
+/* bluecolor */
+
+/* #4393a5 */
+
 body {
     width: 100%;
     height: 100%;
     margin: 0;
-    background-color: #4393a5;
+    background-color: #68a3b9;
     color: rgb(235, 226, 226);
     font-family: "Open Sans", sans-serif;
 }
@@ -16,18 +20,18 @@ body {
 
 /* Header */
 
-header {
+.header {
     padding-top: 20px;
 }
 
 .header-container {
-    margin-right: 50px;
-    margin-left: 50px;
+    margin-right: 180px;
+    margin-left: 180px;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1350px) {
     .header-container {
-        width: 1170px;
+        width: 1000px;
         margin-right: auto;
         margin-left: auto;
     }
@@ -65,13 +69,30 @@ header {
     height: 40px;
 }
 
-.menu-item a {
+.anchor-link, .link-to-top {
     color: white;
     text-decoration: none;
     text-transform: uppercase;
 }
 
-.menu-item a:hover {
+.anchor-link:hover, .link-to-top:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+
+.footer {}
+
+.link-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.link-to-top:hover {
     text-decoration: underline;
 }
 
@@ -84,6 +105,7 @@ header {
 .slide .content {
     display: flex;
     flex-direction: row;
+    padding: 35px 0;
 }
 
 .slide-block {
@@ -91,7 +113,7 @@ header {
 }
 
 #main {
-    background-color: #4393a5;
+    background-color: #68a3b9;
 }
 
 .main-view {
@@ -99,8 +121,8 @@ header {
 }
 
 #company {
-    color: #4393a5;
-    background-color: white;
+    color: #68a3b9;
+    background-color: #2D2A2E;
 }
 
 .description {
@@ -116,7 +138,7 @@ header {
 } */
 
 #team {
-    background-color: #4393a5;
+    background-color: #91B968;
 }
 
 #team .content {
@@ -148,13 +170,13 @@ header {
 }
 
 #support {
-    color: #4393a5;
-    background-color: white;
-    height: 300px;
+    color: #91B968;
+    background-color: #2D2A2E;
+    /* height: 300px; */
 }
 
 #contact {
-    background-color: #4393a5;
+    background-color: #b96f68;
     height: 300px;
 }
 
@@ -168,29 +190,23 @@ header {
 
 .ss-style-triangles {
     position: relative;
-    /* padding: 10em; */
     color: #fff;
     text-align: center;
 }
 
-.ss-style-triangles:not(:last-of-type, :first-of-type)::before, .ss-style-triangles:not(:last-of-type)::after {
+.ss-style-triangles:not(:last-of-type)::before, .ss-style-triangles:not(:last-of-type)::after {
     position: absolute;
     content: '';
     pointer-events: none;
     left: 50%;
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
     -webkit-transform: translateX(-50%) rotate(45deg);
     transform: translateX(-50%) rotate(45deg);
 }
 
-.ss-style-triangles::before {
-    top: -50px;
-    background: #4393a5;
-}
-
 .ss-style-triangles:not(:last-of-type)::after {
-    bottom: -50px;
+    bottom: -30px;
     z-index: 10;
     background: inherit;
 }
