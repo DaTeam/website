@@ -1,21 +1,15 @@
 html {width: 100%;height: 100%;}
-/* bluecolor #4393a5 */
-/* blue v2 #68a3b9 */
-/* green #91B968 */
-/* white #fafafa */
-/* new white #fdfdfd */
 body {margin: 0;color: #61a5e4;font-family: "Open Sans", sans-serif;font-size: 1.5vw;
  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ /* IE6-9 */}
-#background{
-/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#5eaae5+1,a427c4+100 */
-/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#68afec+0,2c2f4b+100 */
-background: #68afec; /* Old browsers */
-background: -moz-linear-gradient(top, #68afec 0%, #2c2f4b 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top, #68afec 0%,#2c2f4b 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom, #68afec 0%,#2c2f4b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#68afec', endColorstr='#2c2f4b',GradientType=0 ); /* IE6-9 */position: fixed;/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#5eaae5+1,a427c4+100 */top: 0;/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#5eaae5+1,a427c4+100 */bottom: 0;/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#5eaae5+1,a427c4+100 */left: 0;/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#5eaae5+1,a427c4+100 */right: 0;/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#5eaae5+1,a427c4+100 */z-index: 0; /* IE6-9 */}
-
-
+#background {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#5eaae5+1,a427c4+100 */
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#68afec+0,2c2f4b+100 */
+    background: #68afec; /* Old browsers */
+    background: -moz-linear-gradient(top, #68afec 0%, #2c2f4b 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #68afec 0%,#2c2f4b 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #68afec 0%,#2c2f4b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#68afec', endColorstr='#2c2f4b',GradientType=0 ); /* IE6-9 */position: fixed;/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#5eaae5+1,a427c4+100 */top: 0;/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#5eaae5+1,a427c4+100 */bottom: 0;/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#5eaae5+1,a427c4+100 */left: 0;/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#5eaae5+1,a427c4+100 */right: 0;/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#5eaae5+1,a427c4+100 */z-index: 0; /* IE6-9 */
+}
 
 .wrapper {z-index: 1;position: relative;}
 /* Header */
@@ -30,23 +24,19 @@ section{overflow: hidden;}
 .wrapper{z-index: 3; }
 .header-container {margin-right: 10%;margin-left: 10%;position: relative;}
 /* Navigation */
-#logo,.scroll #logoScroll {display: block;float: left; height: 100%;width: 10%; top: 0}
-#logo img,#logoScroll img {height: 100%;width: 100%;color: #000;}
-#logo img.hover{position: relative;top: -104px;opacity:0;transition: opacity 0.3s}
-#logoScroll img.hover{position: relative;top: -54px;opacity:0;transition: opacity 0.3s}
-#logo:hover img {}
-#logo:hover img.hover{opacity: 1; transition: opacity 0.3s}
+.logo {display: block;float: left; height: 100%;width: 10%; top: 0}
+.logo img {height: 100%;width: 100%;color: #000;}
+.logo img.hover {position: relative;top: -104px;opacity:0;transition: opacity 0.3s}
+.scroll .logo img.hover {position: relative;top: -54px;opacity:0;transition: opacity 0.3s}
+.logo:hover img {}
+.logo:hover img.hover {opacity: 1; transition: opacity 0.3s}
 
-#logoScroll { filter: brightness(0.38) sepia(0.9) hue-rotate(177deg) saturate(7); } /* Temporary to change svg color */
-#logoScroll:hover img{transition: opacity 0.3s}
-#logoScroll:hover img.hover{opacity: 1; transition: opacity 0.3s}
-
-
-.scroll #logo,#logoScroll{display: none;}
+.scroll .logo { filter: brightness(0.18) sepia(0.9) hue-rotate(177deg) saturate(7) } /* Temporary to change svg color */
+.scroll .logo:hover img{transition: opacity 0.3s}
+.scroll .logo:hover img.hover{opacity: 1; transition: opacity 0.3s}
 .scroll .menu a{color: #1c49a0;padding: 5px 0px;display: inline-block;}
 #company p{max-width: 50vw; text-align:  justify; float: right; padding-right: 3vw;}
 
-.scroll #logo{height: 100%;width: 100%;fill: black;}
 .navbar {height: 100px;width: 70%;display: block;float: left;}
 .menu {margin: 0;list-style-type: none;/* justify-content: flex-end; */color: #61a6e4;top: 50%;display: block;text-align: center;position: relative;padding: 0;float: left;transform: translateY(-50%);width: 100%;}
 .menu-item {margin-left: 25px;line-height: 40px;height: 40px;font-size: 0.8vw;display: inline-block;}
@@ -114,11 +104,11 @@ h1{margin:0;font-size: 4vw; font-weight: 100}
     body,.menu-item,.scroll .menu-item{font-size: 4vw;};
     .menu-item,.menu a,.scroll .menu-item,.scroll .menu-item,.scroll .menu a{display: block !important;margin: 0 !important; color: #5eaae5; text-align: left !important;height: auto !important;padding: 0;}
     header{width: 260px !important; background-color: #fff;bottom: 0px;height: auto !important;padding-left: 4vw !important;}
-    #logo{position: absolute; top: 0px;height: 80px;width: 80px;z-index: 10; display: none;}
-    #logoScroll,.scroll #logoScroll{display: block; position: absolute; height: 80px; width: 80px;left: 275px; background-color: #fff;}
+    .logo{position: absolute; top: 0px;height: 80px;width: 80px;z-index: 10; display: none;}
+    .scroll .logo {display: block; position: absolute; height: 80px; width: 80px;left: 275px; background-color: #fff;}
     .menu{top: 20px; transform: translateY(0);}
     .menu-item,.scroll .menu-item{line-height: 20px; padding: 20px 0;}
-    #logoScroll img.hover{margin-top: -30px}
+    .scroll .logo img.hover{margin-top: -30px}
 
 }
 @media (min-width: 1350px) {

@@ -25,22 +25,13 @@
     function applyAnchorScrolling(selector) {
         if (!selector) return;
 
-        applySmoothScrolling(globalThis.document.querySelectorAll(selector), target => {
-            console.log(target);
-
-            console.log(globalThis.document.querySelector(target.getAttribute('href')));
-            return globalThis.document.querySelector(target.getAttribute('href'));
-        });
+        applySmoothScrolling(globalThis.document.querySelectorAll(selector), target => globalThis.document.querySelector(target.getAttribute('href')));
     }
 
     function applyScrollToTop(selector) {
         if (!selector) return;
 
-        
-        applySmoothScrolling(globalThis.document.querySelectorAll(selector), _target => {
-            console.log('top');
-            return globalThis.document.body;
-        });
+        applySmoothScrolling(globalThis.document.querySelectorAll(selector), _target => globalThis.document.body);
     }
 
     function applySmoothScrolling(elements, getTargetFn) {
