@@ -1,248 +1,128 @@
-html {
-    width: 100%;
-    height: 100%;
-}
-
+html {width: 100%;height: 100%;}
 /* bluecolor #4393a5 */
-
 /* blue v2 #68a3b9 */
-
 /* green #91B968 */
-
 /* white #fafafa */
-
 /* new white #fdfdfd */
+body {margin: 0;color: #61a5e4;font-family: "Open Sans", sans-serif;font-size: 1.5vw;
+ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ /* IE6-9 */}
+#background{
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#5eaae5+1,a427c4+100 */
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#68afec+0,2c2f4b+100 */
+background: #68afec; /* Old browsers */
+background: -moz-linear-gradient(top, #68afec 0%, #2c2f4b 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #68afec 0%,#2c2f4b 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #68afec 0%,#2c2f4b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#68afec', endColorstr='#2c2f4b',GradientType=0 ); /* IE6-9 */position: fixed;/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#5eaae5+1,a427c4+100 */top: 0;/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#5eaae5+1,a427c4+100 */bottom: 0;/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#5eaae5+1,a427c4+100 */left: 0;/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#5eaae5+1,a427c4+100 */right: 0;/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#5eaae5+1,a427c4+100 */z-index: 0; /* IE6-9 */}
 
-body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    background-color: #fdfdfd;
-    color: #68a3b9;
-    font-family: "Open Sans", sans-serif;
-}
 
-.wrapper {}
 
+.wrapper {z-index: 1;position: relative;}
 /* Header */
-
-.header {
-    padding: 20px 0;
-    background-color: #68a3b9;
-}
-
-.header-container {
-    margin-right: 180px;
-    margin-left: 180px;
-}
-
-@media (min-width: 1350px) {
-    .header-container {
-        width: 1000px;
-        margin-right: auto;
-        margin-left: auto;
-    }
-}
-
+.header {position: fixed;top: 0px;height: 100px;width: 100vw;z-index: 10;padding-left: 10vw;}
+.scroll header{background-color: #fff;z-index: 10; border-bottom: solid 1px #61a6e4; height: 50px; transition: all 0.3s }
+.scroll .navbar,.scroll .menu-item{height: 50px; transition: all 0.3s; font-size: 0.8vw}
+section,footer{z-index: 2}
+section hr{position: absolute; color: #61a6e4; bottom: 0px; width: 98%;border: dashed 0.5px;margin: 0;left: 1%;}
+section>.content{z-index: 2; position: relative;width: 100%;}
+section{overflow: hidden;}
+#main .content{position: absolute; top: 50%;}
+.wrapper{z-index: 3; }
+.header-container {margin-right: 10%;margin-left: 10%;position: relative;}
 /* Navigation */
+#logo,.scroll #logoScroll {display: block;float: left; height: 100%;width: 10%; top: 0}
+#logo img,#logoScroll img {height: 100%;width: 100%;color: #000;}
+#logo img.hover{position: relative;top: -104px;opacity:0;transition: opacity 0.3s}
+#logoScroll img.hover{position: relative;top: -54px;opacity:0;transition: opacity 0.3s}
+#logo:hover img {}
+#logo:hover img.hover{opacity: 1; transition: opacity 0.3s}
 
-.logo {}
+#logoScroll { filter: brightness(0.38) sepia(0.9) hue-rotate(177deg) saturate(7); } /* Temporary to change svg color */
+#logoScroll:hover img{transition: opacity 0.3s}
+#logoScroll:hover img.hover{opacity: 1; transition: opacity 0.3s}
 
-.logo-image {
-    height: 100px;
-}
 
-.navbar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
+.scroll #logo,#logoScroll{display: none;}
+.scroll .menu a{color: #1c49a0;padding: 5px 0px;display: inline-block;}
+#company p{max-width: 50vw; text-align:  justify; float: right; padding-right: 3vw;}
 
-.menu {
-    margin: 0;
-    margin-top: 50px;
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    /* justify-content: flex-end; */
-    color: #fdfdfd;
-}
-
-.menu-item {
-    margin-left: 25px;
-    line-height: 40px;
-    height: 40px;
-}
-
-.anchor-link, .link-to-top {
-    color: #fdfdfd;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-.anchor-link:hover, .link-to-top:hover {
-    text-decoration: underline;
-}
-
+.scroll #logo{height: 100%;width: 100%;fill: black;}
+.navbar {height: 100px;width: 70%;display: block;float: left;}
+.menu {margin: 0;list-style-type: none;/* justify-content: flex-end; */color: #61a6e4;top: 50%;display: block;text-align: center;position: relative;padding: 0;float: left;transform: translateY(-50%);width: 100%;}
+.menu-item {margin-left: 25px;line-height: 40px;height: 40px;font-size: 0.8vw;display: inline-block;}
 /* Footer */
-
-.footer {
-    color: #fdfdfd;
-    background-color: #68a3b9;
-    padding: 20px;
-}
-
-.link-to-top {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    color: #fdfdfd;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-.link-to-top:hover {
-    text-decoration: underline;
-}
-
-.copyright {
-    padding: 5px;
-    display: inline-block;
-    /* position: absolute;
-    bottom: 30px;
-    left: 30px; */
-}
-
+.footer {color: #fdfdfd;background-color: #68a3b9;padding: 20px;}
+.link-to-top:hover {text-decoration: underline;}
+.copyright {padding: 5px;display: inline-block;/* position: absolute;bottom: 30px;left: 30px; */}
 /* Slides */
+.slide {position: relative;height: 100vh;width: 100%;margin: 0;padding: 0;}
+.slide .content {}
 
-.slide {
-    position: relative;
-}
+.slide-block {flex: 1;}
+.backDeco{position: absolute;top: 0px; left: 0px; height: 100%; width: 100%}
+#company .backDeco{position: absolute;top: 0px; left: 0px; height: 100%; width: 100%; z-index: 0;}
+#company .content{z-index: 2; position: relative;}
+h1{margin:0;font-size: 4vw; font-weight: 100}
+#company h1{text-align: right; padding-right: 3vw; }
+#team h1{text-align: left;padding-left: 3vw; }
+#company .company-picture{width: 51vw}
+#company .slide-block.picture-container{bottom: 0px; position: absolute;}
+.menu a{color: #fff;transition: color 0.3s; text-decoration: none; text-transform: uppercase;}
+.menu a:hover{transition: color 0.3s; text-decoration: underline;}
 
-.slide .content {
-    display: flex;
-    flex-direction: row;
-    padding: 35px 0;
-}
+#main .backDeco,#contact .backDeco{color: #a32ac4;-webkit-mask: url(assets/images/back.svg) no-repeat right bottom;position: absolute;background-size: 100vw;-webkit-mask-size: 175vw;background-color: #fff;}
+#company .backDeco{color: #fdfdfd;-webkit-mask: url(assets/images/back2.svg) no-repeat right -3px;background-size: 100vw;-webkit-mask-size: 100vw;background-color: #fff;}
+#company .backDeco{color: #fdfdfd;-webkit-mask: url(assets/images/back2.svg) no-repeat right -1px;background-size: 100vw;-webkit-mask-size: 100vw;background-color: #fff;}
+#team .backDeco{color: #fdfdfd;-webkit-mask: url(assets/images/back3.svg) no-repeat right bottom;background-size: 100vw;-webkit-mask-size: 100vw;background-color: #fff; z-index: 0;}
+#support .backDeco{color: #fdfdfd;-webkit-mask: url(assets/images/back4.svg) no-repeat right -3px;background-size: 100vw;-webkit-mask-size: 100vw;background-color: #fff; z-index: 0;}
+#contact h1{color: #fff; padding-left: 3vw;}
+#contact .content{overflow: auto; top: 50%; transform: translateY(-50%);}
 
-.slide-block {
-    flex: 1;
-}
 
-#main {
-    color: #fdfdfd;
-    background-color: #68a3b9;
-}
-
-.main-view {
-    height: 850px;
-}
+.main-view {height: 850px;}
+#imageHome {width: 40vw; max-width: 1000px; top: 50%; transform: translateY(-50%); display: block; z-index: 1; position: absolute; right: 8vw; }
+#logoHome {width: 28vw; left: 14vw; position: absolute; top: 50%; transform: translateY(-95%);z-index: 2}
+#logoHome p{text-align: center; color: #fff; font-weight: 100; margin: 0;font-size: 1.2vw;}
 
 #company {}
+#company .content {display: block;justify-content: center;height: 100vh;}
+#team .content{overflow: auto; top: 50%; transform: translateY(-50%);}
 
-#company .content {
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-}
 
-#company .picture-container {
-    width: 1000px;
-}
-
-.company-picture {
-    flex: 1;
-    width: 1000px;
-    vertical-align: bottom;
-    /* height: 100%; */
-    /* line-height: 100%; */
-    /* margin-top: 100px; */
-    /* position: absolute;
-    bottom: 0; */
-}
-
-#company .description {
-    /* min-height: 300px; */
-    text-align: left;
-}
-
-/* TODO: remove once better structure */
-
-/* .description>* {
-    padding-left: 30px;
-    padding-right: 30px;
-} */
-
+#company .picture-container {width: 1000px;}
+.company-picture {flex: 1;width: 20vw;vertical-align: bottom;/* height: 100%; *//* line-height: 100%; *//* margin-top: 100px; *//* position: absolute;bottom: 0; */}
+#company .description {overflow: auto;top: 50%;position: relative;transform: translateY(-50%);}
+/* TODO: remove once better structure *//* .description>* {padding-left: 30px;padding-right: 30px;} */
 #team {}
-
-#team .content {
-    flex-direction: column;
-    text-align: center;
-}
-
-.team-list {
-    margin: 35px 0;
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
+#team .content {flex-direction: column;text-align: center;}
+.team-list {margin: 35px auto;list-style-type: none;display: flex;flex-direction: row;justify-content: space-evenly;padding: 0;width: 80vw;}
 .team-member {}
-
-.team-picture-container {
-    width: 250px;
-    height: 250px;
-    margin: 0 20px;
-    border-radius: 50%;
-    overflow: hidden;
-}
-
-.team-picture {
-    width: 250px;
-    height: 250px;
-}
-
-.description .team-list {
-    margin-top: 0;
-}
-
-.member-desc {
-    width: 250px;
-    margin: 0 20px;
-    text-align: center;
-}
-
-#support {}
-
-#support .picture-container {
-    width: 1000px;
-}
-
-.support-picture {
-    flex: 1;
-    width: 1000px;
-    /* height: 100%; */
-    /* line-height: 100%; */
-    /* margin-top: 100px; */
-    /* position: absolute;
-    bottom: 0; */
-}
-
+.team-picture-container {width: 200px;height: 200px;border-radius: 50%;overflow: hidden;border: solid;margin: auto;}
+.team-picture {width: 112%;height: 100%;position: relative;top: 50%;left: 50%;transform: translateY(-36%) translateX(-50%);}
+.description .team-list {margin-top: 0;}
+.member-desc {margin: 0 20px;text-align: center;}
+#support h1{ text-align: right; color: #fff; padding-right: 3vw }
+#support .picture-container {position: absolute;z-index: 10;width: 42vw;bottom: -7vh;left: 50%;transform: translateX(-50%);}
+#support .contenu{color: #fff; width: 80vw; text-align: justify; float: right; padding-right: 3vw;; overflow-y: scroll; height: 25vh;margin-right: -16px;padding-bottom: 100px;}
+#support .content{ top: 50%; transform: translateY(-50%); overflow: auto; overflow-x: hidden; }
+.support-picture {width: 100%;}
 #contact {}
+#contact .picture-container {width: 26vw;position: absolute;bottom: -0.5vh;left: 3vw;}
+.contact-picture {flex: 1;width: 100%;vertical-align: bottom;/* height: 100%; *//* line-height: 100%; *//* margin-top: 100px; *//* position: absolute;bottom: 0; */}
 
-#contact .picture-container {
-    width: 500px;
+@media (max-width: 750px) {
+    body,.menu-item,.scroll .menu-item{font-size: 4vw;};
+    .menu-item,.menu a,.scroll .menu-item,.scroll .menu-item,.scroll .menu a{display: block !important;margin: 0 !important; color: #5eaae5; text-align: left !important;height: auto !important;padding: 0;}
+    header{width: 260px !important; background-color: #fff;bottom: 0px;height: auto !important;padding-left: 4vw !important;}
+    #logo{position: absolute; top: 0px;height: 80px;width: 80px;z-index: 10; display: none;}
+    #logoScroll,.scroll #logoScroll{display: block; position: absolute; height: 80px; width: 80px;left: 275px; background-color: #fff;}
+    .menu{top: 20px; transform: translateY(0);}
+    .menu-item,.scroll .menu-item{line-height: 20px; padding: 20px 0;}
+    #logoScroll img.hover{margin-top: -30px}
+
+}
+@media (min-width: 1350px) {
+    .header-container {}
 }
 
-.contact-picture {
-    flex: 1;
-    width: 500px;
-    vertical-align: bottom;
-    /* height: 100%; */
-    /* line-height: 100%; */
-    /* margin-top: 100px; */
-    /* position: absolute;
-    bottom: 0; */
-}
+

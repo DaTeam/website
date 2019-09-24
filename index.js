@@ -1,6 +1,7 @@
 (function (globalThis) {
     const config = {
-        scrollTopThreshold: 350
+        scrollTopThreshold: 350,
+        menuCollapsedThreshold: 150
     };
 
     const refs = {};
@@ -24,13 +25,22 @@
     function applyAnchorScrolling(selector) {
         if (!selector) return;
 
-        applySmoothScrolling(globalThis.document.querySelectorAll(selector), target => globalThis.document.querySelector(target.getAttribute('href')));
+        applySmoothScrolling(globalThis.document.querySelectorAll(selector), target => {
+            console.log(target);
+
+            console.log(globalThis.document.querySelector(target.getAttribute('href')));
+            return globalThis.document.querySelector(target.getAttribute('href'));
+        });
     }
 
     function applyScrollToTop(selector) {
         if (!selector) return;
 
-        applySmoothScrolling(globalThis.document.querySelectorAll(selector), _target => globalThis.document.body);
+        
+        applySmoothScrolling(globalThis.document.querySelectorAll(selector), _target => {
+            console.log('top');
+            return globalThis.document.body;
+        });
     }
 
     function applySmoothScrolling(elements, getTargetFn) {
@@ -45,22 +55,33 @@
 
     function applyOnScrollBehaviour() {
         globalThis.onscroll = () => {
-            refreshTopButtonVisibility();
+            // refreshTopButtonVisibility();
+            refreshHeaderMode();
         };
     }
 
-    function refreshTopButtonVisibility() {
-        if (globalThis.document.body.scrollTop > config.scrollTopThreshold ||
-            globalThis.document.documentElement.scrollTop > config.scrollTopThreshold) {
-            refs.scrollTopElements.forEach(element => {
-                element.style.display = "block";
-            })
+    function refreshHeaderMode() {
+        if (globalThis.document.body.scrollTop > config.menuCollapsedThreshold ||
+            globalThis.document.documentElement.scrollTop > config.menuCollapsedThreshold) {
+            globalThis.document.body.classList.add('scroll')
         }
         else {
-            refs.scrollTopElements.forEach(element => {
-                element.style.display = "none";
-            });
+            globalThis.document.body.classList.remove('scroll')
         }
     }
+
+    // function refreshTopButtonVisibility() {
+    //     if (globalThis.document.body.scrollTop > config.scrollTopThreshold ||
+    //         globalThis.document.documentElement.scrollTop > config.scrollTopThreshold) {
+    //         refs.scrollTopElements.forEach(element => {
+    //             element.style.display = "block";
+    //         })
+    //     }
+    //     else {
+    //         refs.scrollTopElements.forEach(element => {
+    //             element.style.display = "none";
+    //         });
+    //     }
+    // }
 
 })(this);

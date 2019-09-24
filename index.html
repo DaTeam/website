@@ -1,38 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
+    <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="styles.css">
     <title>DaTeam</title>
+    <meta name="description" content="">
+    <meta name="viewport"
+        content="width=device-width, target-densityDpi=device-dpi, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
 </head>
 
 <body>
     <div class="wrapper">
         <header id="header" class="header">
-            <div class="header-container">
-                <nav role="navigation" class="navbar">
-                    <a class="logo anchor-link" href="#header">
-                        <img class="logo-image" src="assets/images/logo-white.png"></img>
-                    </a>
-                    <ul class="menu">
-                        <li class="menu-item"><a class="anchor-link" href="#company">La DaTeam</a></li>
-                        <li class="menu-item"><a class="anchor-link" href="#team">L'équipe</a></li>
-                        <li class="menu-item"><a class="anchor-link" href="#support">Ils nous font confiance</a></li>
-                        <li class="menu-item"><a class="anchor-link" href="#contact">Nous contacter</a></li>
-                    </ul>
-                </nav>
-            </div>
+            <a id="logo" class="link-to-top" href="#header">
+                <img src="assets/images/logoDateam.svg" alt="DaTeam">
+            </a>
+            <a id="logoScroll" class="link-to-top" href="#header">
+                <img src="assets/images/logoDateamB.svg" alt="DaTeam">
+            </a>
+            <nav role="navigation" class="navbar">
+                <ul class="menu">
+                    <li class="menu-item"><a class="anchor-link" href="#company">La DaTeam</a></li>
+                    <li class="menu-item"><a class="anchor-link" href="#team">L'équipe</a></li>
+                    <li class="menu-item"><a class="anchor-link" href="#support">Ils nous font confiance</a></li>
+                    <li class="menu-item"><a class="anchor-link" href="#contact">Nous contacter</a></li>
+                </ul>
+            </nav>
         </header>
         <section id="main" class="slide">
             <div class="content">
-                <div class="slide-block main-view">Image</div>
+                <img class="slide-block" id="imageHome" src="assets/images/yeti.png" alt="DaTeam Yeti">
+                <div class="slide-block" id="logoHome">
+                    <img src="assets/images/dateam.svg" alt="DaTeam">
+                    <p>Notre équipe au service de vos développements</p>
+                </div>
             </div>
+            <div class="backDeco"></div>
+
         </section>
         <section id="company" class="slide">
             <div class="content">
-                <div class="slide-block picture-container">
-                    <img class="company-picture" src="assets/images/slide-dateam.png"></img>
-                </div>
                 <div class="slide-block description">
                     <h1>La DaTeam</h1>
                     <p>Cras nec consequat felis. Maecenas bibendum massa vitae felis commodo, eu commodo nisl suscipit.
@@ -41,57 +50,66 @@
                         erat luctus risus faucibus accumsan fringilla vitae erat. Sed rhoncus tellus ex. Nunc tristique
                         purus et ex sodales accumsan.</p>
                 </div>
-            </div>
-        </section>
-        <section id="team" class="slide">
-            <div class="content">
-                <div class="slide-block">
-                    <h1>L'équipe</h1>
-                    <ul class="team-list">
-                        <li class="team-member">
-                            <div class="team-picture-container">
-                                <img class="team-picture" src="assets/images/yeti1.png"></img>
-                            </div>
-                            <div class="member-desc">
-                                <h3>Guillaume</h3>
-                                <p>Guigui pour les intimes</p>
-                            </div>
-                        </li>
-                        <li class="team-member">
-                            <div class="team-picture-container">
-                                <img class="team-picture" src="assets/images/yeti2.png"></img>
-                            </div>
-                            <div class="member-desc">
-                                <h3>Anthony</h3>
-                                <p>Toto pour les intimes</p>
-                            </div>
-                        </li>
-                        <li class="team-member">
-                            <div class="team-picture-container">
-                                <img class="team-picture" src="assets/images/yeti3.png"></img>
-                            </div>
-                            <div class="member-desc">
-                                <h3>Aurélie</h3>
-                                <p>Lili pour les intimes</p>
-                            </div>
-                        </li>
-                        <li class="team-member">
-                            <div class="team-picture-container">
-                                <img class="team-picture" src="assets/images/yeti4.png"></img>
-                            </div>
-                            <div class="member-desc">
-                                <h3>Justine</h3>
-                                <p>Ju pour les intimes</p>
-                            </div>
-                        </li>
-                    </ul>
+                <div class="slide-block picture-container">
+                    <img class="company-picture" src="assets/images/conseil.svg" alt="DaTeam Conseils"></img>
                 </div>
             </div>
-        </section>
-        <section id="support" class="slide">
-            <div class="content">
-                <div class="slide-block description">
-                    <h1>Ils nous font confiance</h1>
+            <div class="backDeco"></div>
+
+    </div>
+    </section>
+    <section id="team" class="slide">
+        <div class="content">
+            <div class="slide-block">
+                <h1>L'équipe</h1>
+                <ul class="team-list">
+                    <li class="team-member">
+                        <div class="team-picture-container">
+                            <img class="team-picture" src="assets/images/guillaume.svg"></img>
+                        </div>
+                        <div class="member-desc">
+                            <h3>Guillaume</h3>
+                            <p>Guigui pour les intimes</p>
+                        </div>
+                    </li>
+                    <li class="team-member">
+                        <div class="team-picture-container">
+                            <img class="team-picture" src="assets/images/anthony.svg"></img>
+                        </div>
+                        <div class="member-desc">
+                            <h3>Anthony</h3>
+                            <p>Toto pour les intimes</p>
+                        </div>
+                    </li>
+                    <li class="team-member">
+                        <div class="team-picture-container">
+                            <img class="team-picture" src="assets/images/aurelie.svg"></img>
+                        </div>
+                        <div class="member-desc">
+                            <h3>Aurélie</h3>
+                            <p>Lili pour les intimes</p>
+                        </div>
+                    </li>
+                    <li class="team-member">
+                        <div class="team-picture-container">
+                            <img class="team-picture" src="assets/images/justine.svg"></img>
+                        </div>
+                        <div class="member-desc">
+                            <h3>Justine</h3>
+                            <p>Ju pour les intimes</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="backDeco"></div>
+
+    </section>
+    <section id="support" class="slide">
+        <div class="content">
+            <div class="slide-block description">
+                <h1>Ils nous font confiance</h1>
+                <div class="contenu">
                     <p>Nulla consectetur orci ac nisi aliquam, eu molestie purus tempor. Morbi convallis, nulla non
                         vulputate rutrum, neque ligula luctus mauris, vitae tincidunt ex velit a mi. Aliquam mattis
                         lacus non finibus lobortis. Sed dapibus nisl quis eros consectetur gravida. Donec volutpat
@@ -117,30 +135,35 @@
                         sodales odio. Phasellus libero eros, commodo in euismod sit amet, efficitur at orci. Etiam in
                         erat luctus risus faucibus accumsan fringilla vitae erat. Sed rhoncus tellus ex. Nunc tristique
                         purus et ex sodales accumsan.</p>
+                </div>
 
-                </div>
-                <div class="slide-block picture-container">
-                    <img class="support-picture" src="assets/images/slide-support.png"></img>
-                </div>
             </div>
-        </section>
-        <section id="contact" class="slide">
-            <div class="content">
-                <div class="slide-block picture-container">
-                    <img class="contact-picture" src="assets/images/slide-contact.png"></img>
-                </div>
-                <div class="slide-block description">
-                    <h1>Nous contacter</h1>
-                    <p></p>
-                </div>
+        </div>
+        <div class="slide-block picture-container">
+            <img class="support-picture" src="assets/images/clients.png" alt="Clients DaTeam"></img>
+        </div>
+        <div class="backDeco"></div>
+
+    </section>
+    <section id="contact" class="slide">
+        <div class="content">
+            <div class="slide-block description">
+                <h1>Nous contacter</h1>
+                <p></p>
             </div>
-        </section>
+        </div>
+        <div class="backDeco"></div>
+        <div class="slide-block picture-container">
+            <img class="contact-picture" src="assets/images/contact.svg"></img>
+        </div>
+
+    </section>
     </div>
     <footer class="footer">
         <div class="copyright">© DaTeam 2019</div>
         <a class="link-to-top" href="#main">Back to the top</a>
     </footer>
-
+    <div id="background"></div>
     <script src="index.js"></script>
 </body>
 
