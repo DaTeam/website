@@ -1,0 +1,129 @@
+.form {
+    /* padding: 10px 30px 30px 30px;
+    margin: 0 auto;
+    width: 90%;
+
+    margin: auto;
+    text-align: center;
+    width: 350px; */
+
+    padding: 10px 0;
+    margin: 0 auto;
+    width: 90%;
+    text-align: center;
+    width: 300px;
+    font-size: 15px;
+}
+
+.form-group {
+    position: relative;
+}
+.form-group:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.input:focus {
+    outline:none;
+}
+
+/* Text */
+
+.input {
+    position: relative;
+    color: #4c73a0;
+    border-radius: 5px;
+    border: 1px solid #dadcdf;
+    line-height: 45px;
+    height: 45px;
+    padding: 0 12px;
+    font-size: 14px;
+    min-width: 50px;
+    -webkit-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    width: 100%;
+}
+
+.input + label {
+    position: absolute;
+    left: 5px;
+    top: 13px;
+    transition: 0.2s ease all; 
+    -moz-transition: 0.2s ease all; 
+    -webkit-transition: 0.2s ease all;
+    pointer-events:none;
+    user-select: none;
+    background-color: #fff;
+    padding: 0 5px;
+}
+
+.input:not(.empty) + label,
+.input:focus + label {
+    top: -6px;
+    left: 8px;
+    font-size: 0.7em;
+    color: #4c73a0;
+}
+  
+.input:focus {
+    border: 1px solid #4c73a0;;
+}
+
+/* Text area */
+
+.inputTextArea {
+    resize: none;
+    height: 150px;
+    padding: 10px;
+}
+
+/* Button */
+
+.btn {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    background: #4c73a0;
+    border: 1px solid #4c73a0;
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-size: 1em;
+    background-position: center;
+    transition: background-color 400ms;
+    cursor: pointer;
+    border: none;
+    user-select: none;
+    overflow: hidden;
+}
+
+.btn:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, .2);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%;
+}
+
+.btn:hover {
+    background-color: #2d9cf7;
+}
+
+.btn:disabled {
+    opacity: 0.4;
+}
+
+.btn.btn-primary {
+    background-color: #4c73a0;
+    border-color: #4c73a0;
+
+}
+
+.btn.btn-primary:hover {
+    background-color: #2d9cf7;
+}

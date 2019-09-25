@@ -1,6 +1,20 @@
+* {
+    outline: none;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
 html {width: 100%;height: 100%;}
-body {margin: 0;color: #61a5e4;font-family: "Open Sans", sans-serif;font-size: 1.5vw;
- /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ /* IE6-9 */}
+body {
+    margin: 0;
+    /* color: #61a5e4; */
+    color: #465573;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.2vw;
+}
+
 #background {
     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#5eaae5+1,a427c4+100 */
     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#68afec+0,2c2f4b+100 */
@@ -14,8 +28,8 @@ body {margin: 0;color: #61a5e4;font-family: "Open Sans", sans-serif;font-size: 1
 .wrapper {z-index: 1;position: relative;}
 /* Header */
 .header {position: fixed;top: 0px;height: 100px;width: 100vw;z-index: 10;padding-left: 10vw;}
-.scroll header{background-color: #fff;z-index: 10; border-bottom: solid 1px #61a6e4; height: 50px; transition: all 0.3s }
-.scroll .navbar,.scroll .menu-item{height: 50px; transition: all 0.3s; font-size: 0.8vw}
+.scroll header{background-color: #fff;z-index: 10; border-bottom: solid 1px #61a6e4; height: 70px; transition: all 0.3s }
+.scroll .navbar,.scroll .menu-item { height: 70px; transition: all 0.3s; font-size: 0.8vw; line-height: 70px; }
 section,footer{z-index: 2}
 section hr{position: absolute; color: #61a6e4; bottom: 0px; width: 98%;border: dashed 0.5px;margin: 0;left: 1%;}
 section>.content{z-index: 2; position: relative;width: 100%;}
@@ -35,7 +49,7 @@ section{overflow: hidden;}
 .scroll .logo:hover img{transition: opacity 0.3s}
 .scroll .logo:hover img.hover{opacity: 1; transition: opacity 0.3s}
 .scroll .menu a{color: #1c49a0;padding: 5px 0px;display: inline-block;}
-#company p{max-width: 50vw; text-align:  justify; float: right; padding-right: 3vw;}
+#company p {max-width: 45vw; text-align:  justify; float: right; padding-right: 3vw;}
 
 .navbar {height: 100px;width: 70%;display: block;float: left;}
 .menu {margin: 0;list-style-type: none;/* justify-content: flex-end; */color: #61a6e4;top: 50%;display: block;text-align: center;position: relative;padding: 0;float: left;transform: translateY(-50%);width: 100%;}
@@ -49,12 +63,13 @@ section{overflow: hidden;}
 .slide .content {}
 
 .slide-block {flex: 1;}
+
 .backDeco{position: absolute;top: 0px; left: 0px; height: 100%; width: 100%}
 #company .backDeco{position: absolute;top: 0px; left: 0px; height: 100%; width: 100%; z-index: 0;}
 #company .content{z-index: 2; position: relative;}
-h1{margin:0;font-size: 4vw; font-weight: 100}
+h1 {margin:0;font-size: 2.4vw; font-weight: 100}
 #company h1{text-align: right; padding-right: 3vw; }
-#team h1{text-align: left;padding-left: 3vw; }
+#team h1 {text-align: center;padding-left: 3vw; }
 #company .company-picture{width: 51vw}
 #company .slide-block.picture-container{bottom: 0px; position: absolute;}
 .menu a{color: #fff;transition: color 0.3s; text-decoration: none; text-transform: uppercase;}
@@ -69,8 +84,6 @@ h1{margin:0;font-size: 4vw; font-weight: 100}
 #contact .backDeco{c-webkit-mask: url(assets/images/back.svg) no-repeat right -400vh;-webkit-mask-size: 100vw;}*/
 #backDeco{ position: absolute; top: 0px; left: 0px; right: 0px; height: 500vh; z-index: 1; background: url(assets/images/back.svg) no-repeat 100% 100%; -webkit-background-size: cover; /* pour anciens Chrome et Safari */background-size: cover; /* version standardisée */ }
 #backDeco img{ width: 100%; height: 100%; display: none; }
-#contact h1{color: #fff; padding-left: 3vw;}
-#contact .content{overflow: auto; top: 50%; transform: translateY(-50%);}
 
 
 .main-view {height: 850px;}
@@ -80,12 +93,12 @@ h1{margin:0;font-size: 4vw; font-weight: 100}
 
 #company {}
 #company .content {display: block;justify-content: center;height: 100vh;}
-#team .content{overflow: auto; top: 50%; transform: translateY(-50%);}
+#team .content{top: 50%; transform: translateY(-50%);}
 
 
 #company .picture-container {width: 1000px;}
 .company-picture {flex: 1;width: 20vw;vertical-align: bottom;/* height: 100%; *//* line-height: 100%; *//* margin-top: 100px; *//* position: absolute;bottom: 0; */}
-#company .description {overflow: auto;top: 50%;position: relative;transform: translateY(-50%);}
+#company .description {top: 50%;position: relative;transform: translateY(-50%);}
 /* TODO: remove once better structure *//* .description>* {padding-left: 30px;padding-right: 30px;} */
 #team {}
 #team .content {flex-direction: column;text-align: center;}
@@ -97,10 +110,12 @@ h1{margin:0;font-size: 4vw; font-weight: 100}
 .member-desc {margin: 0 20px;text-align: center;}
 #support h1{ text-align: right; color: #60a4e4; padding-right: 3vw }
 #support .picture-container {position: absolute;z-index: 10;width: 42vw;bottom: -7vh;left: 50%;transform: translateX(-50%);}
-#support .contenu{color: #60a4e4; width: 80vw; text-align: justify; float: right; padding-right: 3vw;; overflow-y: scroll; height: 25vh;margin-right: -16px;padding-bottom: 100px;}
-#support .content{ top: 50%; transform: translateY(-50%); overflow: auto; overflow-x: hidden; }
+#support .contenu{color: #60a4e4; width: 80vw; text-align: justify; float: right; padding-right: 3vw; height: 25vh;margin-right: -16px;padding-bottom: 100px;}
+#support .content{ top: 50%; transform: translateY(-50%); }
 .support-picture {width: 100%;}
 #contact {}
+#contact h1 { color: #4c73a0; }
+#contact .content{top: 65%; transform: translateY(-50%);}
 #contact .picture-container {width: 26vw;position: absolute;bottom: -0.5vh;left: 3vw;}
 .contact-picture {flex: 1;width: 100%;vertical-align: bottom;/* height: 100%; *//* line-height: 100%; *//* margin-top: 100px; *//* position: absolute;bottom: 0; */}
 
@@ -119,4 +134,19 @@ h1{margin:0;font-size: 4vw; font-weight: 100}
     .header-container {}
 }
 
+.contact-form {
+    padding: 20px 0;
+    margin: auto;
+    text-align: center;
+    width: 450px;
+    background-color: #fff;
+    border-radius: 5px;
+    color: #4c73a0;
+}
 
+.contact-btn {
+    display: block;
+    width: 100%;
+    margin: 20px auto 0 auto;
+    padding: 10px 0;
+}
