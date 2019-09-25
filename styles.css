@@ -60,11 +60,15 @@ h1{margin:0;font-size: 4vw; font-weight: 100}
 .menu a{color: #fff;transition: color 0.3s; text-decoration: none; text-transform: uppercase;}
 .menu a:hover{transition: color 0.3s; text-decoration: underline;}
 
-#main .backDeco,#contact .backDeco{color: #a32ac4;-webkit-mask: url(assets/images/back.svg) no-repeat right bottom;position: absolute;background-size: 100vw;-webkit-mask-size: 175vw;background-color: #fff;}
-#company .backDeco{color: #fdfdfd;-webkit-mask: url(assets/images/back2.svg) no-repeat right -3px;background-size: 100vw;-webkit-mask-size: 100vw;background-color: #fff;}
-#company .backDeco{color: #fdfdfd;-webkit-mask: url(assets/images/back2.svg) no-repeat right -1px;background-size: 100vw;-webkit-mask-size: 100vw;background-color: #fff;}
-#team .backDeco{color: #fdfdfd;-webkit-mask: url(assets/images/back3.svg) no-repeat right bottom;background-size: 100vw;-webkit-mask-size: 100vw;background-color: #fff; z-index: 0;}
-#support .backDeco{color: #fdfdfd;-webkit-mask: url(assets/images/back4.svg) no-repeat right -3px;background-size: 100vw;-webkit-mask-size: 100vw;background-color: #fff; z-index: 0;}
+
+/*.backDeco{-webkit-mask: url(assets/images/back.svg) no-repeat right -100vh;background-size: 100vw;-webkit-mask-size: 100vw;background-color: #fff;z-index: 1; display: none;}
+#main .backDeco{-webkit-mask: url(assets/images/back.svg) no-repeat right top;-webkit-mask-size: 100vw;}
+#company .backDeco{-webkit-mask: url(assets/images/back.svg) no-repeat right -100vh;-webkit-mask-size: 100vw;}
+#team .backDeco{-webkit-mask: url(assets/images/back.svg) no-repeat right -200vh;-webkit-mask-size: 100vw;}
+#support .backDeco{-webkit-mask: url(assets/images/back.svg) no-repeat right -300vh;-webkit-mask-size: 100vw;}
+#contact .backDeco{c-webkit-mask: url(assets/images/back.svg) no-repeat right -400vh;-webkit-mask-size: 100vw;}*/
+#backDeco{ position: absolute; top: 0px; left: 0px; right: 0px; height: 500vh; z-index: 1; background: url(assets/images/back.svg) no-repeat 100% 100%; -webkit-background-size: cover; /* pour anciens Chrome et Safari */background-size: cover; /* version standardisée */ }
+#backDeco img{ width: 100%; height: 100%; display: none; }
 #contact h1{color: #fff; padding-left: 3vw;}
 #contact .content{overflow: auto; top: 50%; transform: translateY(-50%);}
 
@@ -91,9 +95,9 @@ h1{margin:0;font-size: 4vw; font-weight: 100}
 .team-picture {width: 112%;height: 100%;position: relative;top: 50%;left: 50%;transform: translateY(-36%) translateX(-50%);}
 .description .team-list {margin-top: 0;}
 .member-desc {margin: 0 20px;text-align: center;}
-#support h1{ text-align: right; color: #fff; padding-right: 3vw }
+#support h1{ text-align: right; color: #60a4e4; padding-right: 3vw }
 #support .picture-container {position: absolute;z-index: 10;width: 42vw;bottom: -7vh;left: 50%;transform: translateX(-50%);}
-#support .contenu{color: #fff; width: 80vw; text-align: justify; float: right; padding-right: 3vw;; overflow-y: scroll; height: 25vh;margin-right: -16px;padding-bottom: 100px;}
+#support .contenu{color: #60a4e4; width: 80vw; text-align: justify; float: right; padding-right: 3vw;; overflow-y: scroll; height: 25vh;margin-right: -16px;padding-bottom: 100px;}
 #support .content{ top: 50%; transform: translateY(-50%); overflow: auto; overflow-x: hidden; }
 .support-picture {width: 100%;}
 #contact {}
