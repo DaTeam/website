@@ -16,6 +16,8 @@
         applyAnchorScrolling('.anchor-link');
         applyScrollToTop('.link-to-top');
         applyOnScrollBehaviour();
+
+        refreshHeaderMode();
     }
 
     function loadRefs() {
