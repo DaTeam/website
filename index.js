@@ -1,6 +1,6 @@
 (function (globalThis) {
     const config = {
-        version: '0.1.1',
+        version: '0.2',
         scrollTopThreshold: 350,
         menuCollapsedThreshold: 150,
         contactFormSelector: '.contact-form',
@@ -16,7 +16,8 @@
 
     const data = {
         mobileEnabled: false,
-        mobileMenuOpened: false
+        mobileMenuOpened: false,
+        submittingForm: false
     };
 
     globalThis.onload = (_event => {
@@ -136,6 +137,9 @@
 
     function onContactSubmit(event) {
         event.preventDefault();
+        if (data.submittingForm) return;
+
+        data.submittingForm = true;
 
         const formData = refs.formInputElements.reduce((acc, element) => {
             acc[element.name] = element.value;
@@ -160,6 +164,9 @@
             .catch(err => {
                 console.warn(err.message);
                 alert('Merci pour votre message, cependant une erreur est survenue lors de l\'envoi.');
+            })
+            .finally(() => {
+                data.submittingForm = false;
             });
     }
 
