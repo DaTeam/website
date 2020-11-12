@@ -137,15 +137,23 @@
 
     function onContactSubmit(event) {
         event.preventDefault();
+
         if (data.submittingForm) return;
 
         data.submittingForm = true;
 
-        const formData = refs.formInputElements.reduce((acc, element) => {
-            acc[element.name] = element.value;
+        const formData = new FormData(event.target);
+        const requestData = [...formData.entries()].reduce((acc, entry) => {
+            let [key, value] = entry;
+
+            // if (key === 'g-recaptcha-response') key = 'recaptcha';
+
+            acc[key] = value;
 
             return acc;
         }, {});
+
+        if (typeof requestData.recaptcha !== 'string' || requestData.recaptcha.trim().length === 0) return;
 
         const headers = new Headers();
 
@@ -155,9 +163,11 @@
         fetch(config.contactFormSubmitUrl, {
             headers,
             method: 'post',
-            body: JSON.stringify(formData)
+            body: JSON.stringify(requestData)
         })
-            .then(() => {
+            .then(response => {
+                if (!response.ok) throw new Error(response.statusText);
+
                 alert('Merci pour votre message, celui-ci a bien été envoyé et nous reviendrons vers vous dès que possible.');
                 clearContactFormInputs();
             })
@@ -177,6 +187,7 @@
     function clearContactFormInputs() {
         refs.formInputElements.forEach(input => {
             input.value = '';
+            input.classList.add('empty');
         });
     }
 
